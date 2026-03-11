@@ -1,5 +1,5 @@
 # Stage 1: Ensure submodule source is available
-FROM python:3.10-slim AS source
+FROM python:3.14-slim AS source
 
 RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
 
@@ -11,7 +11,7 @@ RUN if [ ! -f claude-code-free/pyproject.toml ]; then \
     fi
 
 # Stage 2: Build
-FROM python:3.10-slim
+FROM python:3.14-slim
 
 WORKDIR /app
 
