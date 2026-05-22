@@ -38,6 +38,13 @@
     "defaults": {
       "model": {
         "primary": "claude-code-free/__MODEL__"
+      },
+      "llm": {
+        "idleTimeoutSeconds": 300,
+        "timeoutSeconds": 600
+      }
+    }
+  }
       }
     }
   },
